@@ -14,13 +14,10 @@
  */
 
 global $_LANG;
-
 $_LANG['ChinaPay'] = '中国银联';
 $_LANG['chinapay_desc'] = '中国银联';
 $_LANG['chinapay_account'] = '商户账号';
 $_LANG['chinapay_merkey_file'] = '私钥路径';
 $_LANG['chinapay_pubkey_file'] = '公钥路径';
 $_LANG['pay_button'] = '立即使用中国银联支付';
-
-
 ?>

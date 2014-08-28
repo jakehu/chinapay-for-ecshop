@@ -1,33 +1,33 @@
 <?php
-	/*Çë°´ÕÕÄúµÄÊµ¼ÊÇé¿öÅäÖÃÒÔÏÂ¸÷²ÎÊý*/
+	/*è¯·æŒ‰ç…§æ‚¨çš„å®žé™…æƒ…å†µé…ç½®ä»¥ä¸‹å„å‚æ•°*/
 
-	//Ë½Ô¿ÎÄ¼þ£¬ÔÚCHINAPAYÉêÇëÉÌ»§ºÅÊ±»ñÈ¡£¬ÇëÏàÓ¦ÐÞ¸Ä´Ë´¦£¬¿ÉÌîÏà¶ÔÂ·¾¶£¬ÏÂÍ¬
+	//ç§é’¥æ–‡ä»¶ï¼Œåœ¨CHINAPAYç”³è¯·å•†æˆ·å·æ—¶èŽ·å–ï¼Œè¯·ç›¸åº”ä¿®æ”¹æ­¤å¤„ï¼Œå¯å¡«ç›¸å¯¹è·¯å¾„ï¼Œä¸‹åŒ
 	define("PRI_KEY", ROOT_PATH . "includes/modules/payment/chinapay/MerPrK_808080201302738_20131014134603.key");
-	//¹«Ô¿ÎÄ¼þ£¬Ê¾ÀýÖÐÒÑ¾­°üº¬
+	//å…¬é’¥æ–‡ä»¶ï¼Œç¤ºä¾‹ä¸­å·²ç»åŒ…å«
 	define("PUB_KEY", ROOT_PATH . "includes/modules/payment/chinapay/PgPubk.key");
 	
-	/*ÈçÄúÒÑÓÐÉú²úÃÜÔ¿£¬ÇëÐÞ¸ÄÒÔÏÂÅäÖÃ£¬Ä¬ÈÏÎª²âÊÔ»·¾³*/
+	/*å¦‚æ‚¨å·²æœ‰ç”Ÿäº§å¯†é’¥ï¼Œè¯·ä¿®æ”¹ä»¥ä¸‹é…ç½®ï¼Œé»˜è®¤ä¸ºæµ‹è¯•çŽ¯å¢ƒ*/
 	
-	//Ö§¸¶ÇëÇóµØÖ·(²âÊÔ)
+	//æ”¯ä»˜è¯·æ±‚åœ°å€(æµ‹è¯•)
 	//define("REQ_URL_PAY","http://payment-test.ChinaPay.com/pay/TransGet");
-	//Ö§¸¶ÇëÇóµØÖ·(Éú²ú)
+	//æ”¯ä»˜è¯·æ±‚åœ°å€(ç”Ÿäº§)
 	define("REQ_URL_PAY","https://payment.ChinaPay.com/pay/TransGet");
 	
-	//²éÑ¯ÇëÇóµØÖ·(²âÊÔ)
+	//æŸ¥è¯¢è¯·æ±‚åœ°å€(æµ‹è¯•)
 	define("REQ_URL_QRY","http://payment-test.chinapay.com/QueryWeb/processQuery.jsp");
-	//²éÑ¯ÇëÇóµØÖ·(Éú²ú)
+	//æŸ¥è¯¢è¯·æ±‚åœ°å€(ç”Ÿäº§)
 	//define("REQ_URL_QRY","http://console.chinapay.com/QueryWeb/processQuery.jsp");
 	
-	//ÍË¿îÇëÇóµØÖ·(²âÊÔ)
+	//é€€æ¬¾è¯·æ±‚åœ°å€(æµ‹è¯•)
 	define("REQ_URL_REF","http://payment-test.chinapay.com/refund1/SingleRefund.jsp");
-	//ÍË¿îÇëÇóµØÖ·(Éú²ú)
+	//é€€æ¬¾è¯·æ±‚åœ°å€(ç”Ÿäº§)
 	//define("REQ_URL_REF","https://bak.chinapay.com/refund/SingleRefund.jsp");
 
 	function getcwdOL(){
-    $total = $_SERVER[PHP_SELF];
-    $file = explode("/", $total);
-    $file = $file[sizeof($file)-1];
-    return substr($total, 0, strlen($total)-strlen($file)-1);
+	    $total = $_SERVER[PHP_SELF];
+	    $file = explode("/", $total);
+	    $file = $file[sizeof($file)-1];
+	    return substr($total, 0, strlen($total)-strlen($file)-1);
 	}
 	
 	function getSiteUrl(){
@@ -44,6 +44,6 @@
 		} 
 	}
 	
-	//È¡µÃ±¾Ê¾Àý°²×°Î»ÖÃ
+	//å–å¾—æœ¬ç¤ºä¾‹å®‰è£…ä½ç½®
 	$site_url = getSiteUrl();
 ?>
